@@ -51,7 +51,7 @@ var app = new Vue({
 computed: {
     validate: function () {
       if (this.isNameValid && this.isAgeValid && this.isEmailValid && this.isCommentValid) {
-        return this.message = "SUbmitted";
+        return this.message = "Submitted";
       } else {
         return this.message = "Not Submitted"
       }
