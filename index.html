@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 215_cool submissions</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <h2>Form</h2>
+  <p>Must answer boxes to submit</p>
+  <div id="form">
+    <label for="name">Name: </label>
+    <input type="text" v-model="name" placeholder="Enter your name" id="name" name="name" required="required" v-bind:class="isNameValid ? 'valid' : 'invalid'">
+    <p v-bind:class="isNameValid ? 'text-valid' : 'text-invalid'"><small>{{nameMessage}}</small></p>
+    
+    <label for="name">Age: </label>
+    <input type="text" v-model="age" placeholder="Enter your age" id="age" name="age" required="required" v-bind:class="isAgeValid ? 'valid' : 'invalid'">
+        <p v-bind:class="isAgeValid ? 'text-valid' : 'text-invalid'"><small>{{ageMessage}}</small></p>
+    
+        <label for="name">E-mail: </label>
+    <input type="text" v-model="email" placeholder="Enter your E-mail" id="email" name="email" required="required" v-bind:class="isEmailValid ? 'valid' : 'invalid'">
+        <p v-bind:class="isEmailValid ? 'text-valid' : 'text-invalid'"><small>{{emailMessage}}</small></p>
+    
+    
+    <button v-on:click="validate()" class="myButton">Submit</button>
+  </div>
+  <h2>{{message}}</h2>
+  
+   <div class="description2">Click on a character name to see their codename</div>
+
+  <div>
+    <player v-for="item in list" v-bind:name="item.name" v-bind:cname="item.codename" v-bind:flipped="item.flipped"></player>
+  </div>
+  
+  <div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
